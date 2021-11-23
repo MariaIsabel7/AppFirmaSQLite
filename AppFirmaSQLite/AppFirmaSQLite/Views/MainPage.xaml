@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:controls="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="AppFirmaSQLite.MainPage">
+
+    <StackLayout>
+        <ScrollView>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+                <Label Text="Laboratorio 2.1" FontSize="Title" HorizontalOptions="CenterAndExpand" Margin="10" />
+                <controls:SignaturePadView  HeightRequest="200" x:Name="viewfirma" StrokeColor="Black" StrokeWidth="2" CaptionText="Firma" CaptionFontSize="14" PromptText="X" PromptFontSize="16"/>
+
+                <Entry x:Name="ttname" Placeholder="Nombre" FontSize="17" Margin="20,50,20,0"/>
+                <Entry x:Name="ttdecrip" Placeholder="Descripcion" FontSize="17" Margin="20,0,20,0"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0"
+                         Grid.Column="0"/>
+
+                    <BoxView Grid.Row="0"
+                         Grid.Column="1" />
+                </Grid>
+                <Button Text="LISTA" x:Name="btn_lista" WidthRequest="200" Clicked="btn_lista_Clicked" HorizontalOptions="Center" />
+                <Button Text="SALVAR" x:Name="btn_salvar" Clicked="btn_salvar_Clicked" WidthRequest="200" HorizontalOptions="Center"/>
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>
